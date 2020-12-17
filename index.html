@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <title>To Do</title>
+    <style>
+        body{margin:0;padding:0;box-sizing: border-box;background-color: lightblue;}
+        #todo{margin:auto 25%;border:2px solid lightcoral;border-radius:15px;padding:5px;font-size:20px;font-family: 'Courier New', Courier, monospace;}
+        #todo input[type="text"]{margin:2% 2% 2% 2%;width:95%;line-height: 25px;background-color: lightcoral;}
+        button{width:50%;margin:auto 25%;border:none;background-color: lightcoral;color:black;cursor:pointer;font-size:25px;}
+        button:hover{border-radius:15px;color:white;background-color:maroon;}
+        #todo li{margin-left:20px;padding:10px;width:75%;text-transform:uppercase;border:2px solid whitesmoke;border-radius:15px;background-color: lightcoral;color:white;font-size:20px;font-weight: bold;}
+        li:hover{cursor:pointer;opacity: 0.7;}
+        .done{background-color: maroon;text-align:center;text-decoration: line-through;}
+        @media screen and (max-width:700px){
+            #todo{
+                margin:auto;
+                border:none;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="todo">
+        <input type="text" onfocus="clearThis(this)" id="newtodo" placeholder="Enter things you would like to complete">
+        <button @click="addtodo">Create Todo</button><br>
+        <h3 v-if="availabletodo">Upcoming tasks...</h3>
+        <ul>
+            <li v-for="todo in todos" onclick="done(this)">{{ todo }}</li>
+        </ul>
+    </div>
+    <script src="mytodo.js"></script>
+</body>
+</html>
