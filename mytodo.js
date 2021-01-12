@@ -19,9 +19,11 @@ new Vue({
         }
     }
 });
-function clearThis(target) {
+function clearThis(target) 
+{
     target.value= "";
 }
-function done(newtarget){
+function done(newtarget)
+{
     newtarget.classList.toggle("done");
 }
