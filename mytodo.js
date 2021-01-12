@@ -20,7 +20,7 @@ new Vue({
     }
 });
 function clearThis(target) {
-    target.value= "    ";
+    target.value= "";
 }
 function done(newtarget){
     newtarget.classList.toggle("done");
