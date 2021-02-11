@@ -14,7 +14,7 @@ new Vue({
             newtodo='';
             }
             else{
-                window.alert('There is no to-do to add!');
+                window.alert('There is no to-do entered');
             }
         }
     }
