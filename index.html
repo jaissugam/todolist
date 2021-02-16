@@ -25,7 +25,7 @@
 </head>
 <body>
     <div id="todo">
-        <input type="text" onfocus="clearThis(this)" id="newtodo" placeholder="Enter things you would like to complete">
+        <input type="text" onfocus="clearThis(this)" id="newtodo" placeholder="Enter things you would like to complete today">
         <button @click="addtodo">Create Todo</button><br>
         <h3 v-if="availabletodo">Upcoming tasks...</h3>
         <ul>
